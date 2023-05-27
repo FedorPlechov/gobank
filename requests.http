@@ -1,0 +1,30 @@
+GET {{host}}/accounts
+
+### Get account by ID
+
+GET {{host}}/account/5
+x-jwt-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50TnVtYmVyIjo0NjEwMCwiZXhwaXJlc0F0IjoxNTAwMH0.KrAT6JFKS8l5XXdwf9zEHEmNZbSi9199HFwd0qtOTfY
+
+###
+
+POST {{host}}/account
+Content-Type: application/json
+
+{
+  "firstName": "name3",
+  "lastName": "lastName2"
+}
+
+### delete account id = 4
+
+DELETE {{host}}/account/4
+
+###
+
+POST {{host}}/transfer
+Content-Type: application/json
+
+{
+  "toAccount": 1,
+  "amount": 200
+}
